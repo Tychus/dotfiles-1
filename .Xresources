@@ -1,0 +1,3 @@
+#include "/home/candres/.config/Xresources/colors"
+#include "/home/candres/.config/Xresources/fonts"
+#include "/home/candres/.config/Xresources/rxvt-unicode"
