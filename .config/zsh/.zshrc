@@ -25,7 +25,7 @@ fpath=($ZDOTDIR/prompt $fpath)
 autoload -Uz office.zsh-theme; office.zsh-theme
 
 # Load aliases and shortcuts if existent.
-source $ZDOTDIR/aliases/aliases
+source $ZDOTDIR/aliases/aliasrc
 
 # Basic auto/tab complete:
 autoload -Uz compinit; compinit
