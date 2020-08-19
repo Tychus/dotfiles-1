@@ -27,6 +27,9 @@ autoload -Uz office.zsh-theme; office.zsh-theme
 # Load aliases and shortcuts if existent.
 source $ZDOTDIR/aliases/aliasrc
 
+# zsh-completion plugin:
+fpath=($ZDOTDIR/plugins/zsh-completions/src $fpath)
+
 # Basic auto/tab complete:
 autoload -Uz compinit; compinit
 _comp_options+=(globdots)
@@ -52,3 +55,10 @@ bindkey -M menuselect 'right' vi-forward-char
 # Fix backspace bug when switching modes
 bindkey "^?" backward-delete-char
 
+# Edit current command line with $EDITOR (vi-mode, then v)
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# Syntax highlighting plugin:
+source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

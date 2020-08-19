@@ -31,7 +31,7 @@ alt + q
 	bspc quit
 
 ##################################################
-###-----------Screenshot / Volume--------------###
+###------------Media / Touchpad----------------###
 ##################################################
 
 # Screenshots
@@ -48,6 +48,9 @@ XF86AudioLowerVolume
 	amixer -q set Master 5%-
 XF86AudioMute
 	amixer set Master toggle
+
+XF86TouchpadToggle
+	exec $XDG_CONFIG_HOME/sxhkd/scripts/touchpad.sh	
 
 ##################################################
 ###-------Open Terminal / Focus Windows--------###
