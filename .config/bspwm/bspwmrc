@@ -3,6 +3,7 @@ bspc rule -r "*"
 
 ###---AUTOSTART---###
 sxhkd &
+xinput disable 15 &
 setxkbmap -option "caps:swapescape"
 xsetroot -cursor_name left_ptr &
 xrdb ~/.Xresources &

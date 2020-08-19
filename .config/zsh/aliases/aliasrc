@@ -26,3 +26,7 @@ alias zshrc='$EDITOR $ZDOTDIR/.zshrc'
 alias zprofile='$EDITOR $ZDOTDIR/.zprofile'
 alias zhistory='less -N $ZDOTDIR/.zhistory'
 alias zshenv='$EDITOR ~/.zshenv'
+
+# Navigation:
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index

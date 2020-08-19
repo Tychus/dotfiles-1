@@ -7,8 +7,11 @@ fpath=($ZDOTDIR/plugins $fpath)
 autoload -U colors && colors
 
 # Navigation:
-setopt AUTO_CD 
-setopt EXTENDED_GLOB
+setopt AUTO_CD			# Go to folder path without using cd.
+setopt EXTENDED_GLOB		# Use extended globbing syntax.
+setopt AUTO_PUSHD		# Push the old directory onto the stack on cd.
+setopt PUSHD_IGNORE_DUPS	# Do not store duplicates in the stack.
+setopt PUSHD_SILENT		# Do not print the directory stack after pushd or popd
 
 # History:
 setopt EXTENDED_HISTORY		# Write the history file in the ':start:elapsed;command' format.
