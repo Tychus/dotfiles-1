@@ -1,7 +1,6 @@
 # Environmetal variables are set here.
 
 # Default programs:
-
 # Editor
 export EDITOR="nvim"
 export VISUAL="nvim"

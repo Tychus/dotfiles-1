@@ -2,10 +2,11 @@
 ###---Opening applications / Closing windows---###
 ##################################################
 
-# Launch apps
-super + shift + {f,v,m,}
-	alacritty -e {ranger, nvim, ncmpcpp}
-	
+# Launch Scratchpad
+super + r
+#	tdrop -ma -w 50% -y 25% -x 25% -p htop urxvt
+
+# Launch Web Browser
 super + shift + e
 	brave
 
@@ -23,8 +24,7 @@ super + {_,shift + }q
 
 # Reload sxhkd and bspwm config
 alt + r
-	pkill -USR1 -x sxhkd
-	bspc wm -r
+	pkill -USR1 -x sxhkd && bspc wm -r
 
 # Quit bspwm
 alt + q

@@ -1,2 +1,10 @@
+udiskie &
+dunst &
+sxhkd &
+
+setxkbmap -option "caps:swapescape"
 numlockx &
+
+mpd &
 exec bspwm
+

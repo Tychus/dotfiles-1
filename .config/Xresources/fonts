@@ -1,0 +1,8 @@
+
+! ------------------------------------------------------------------------------
+! Fonts
+! ------------------------------------------------------------------------------
+
+URxvt.font: xft:Tamzen:Regular:size=11
+URxvt.boldFont: xft:Tamzen:Bold:size=11
+URxvt.italicFont: xft:Tamzen:size=11

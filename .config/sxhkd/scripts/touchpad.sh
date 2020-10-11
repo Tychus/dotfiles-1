@@ -1,5 +1,5 @@
-if [[ $(xinput list 15 | grep -Ec "disabled") -eq 1 ]]; then
-	xinput enable 15
+if [[ $(xinput list ETPS/2\ Elantech\ Touchpad | grep -Ec "disabled") -eq 1 ]]; then
+	xinput enable ETPS/2\ Elantech\ Touchpad
 else
-	xinput disable 15
+	xinput disable ETPS/2\ Elantech\ Touchpad
 fi

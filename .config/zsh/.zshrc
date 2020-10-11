@@ -14,7 +14,6 @@ setopt PUSHD_IGNORE_DUPS	# Do not store duplicates in the stack.
 setopt PUSHD_SILENT		# Do not print the directory stack after pushd or popd
 
 # History:
-setopt EXTENDED_HISTORY		# Write the history file in the ':start:elapsed;command' format.
 setopt SHARE_HISTORY		# Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST	# Expire a duplicate event first when trimming history.
 setopt HIST_IGNORE_DUPS		# Do not record an event that was just recorded.
@@ -24,8 +23,8 @@ setopt HIST_IGNORE_SPACE	# Do not record an event starting with space.
 setopt HIST_VERIFY		# Do not execute inmediately upon history expansion.
 
 # PROMPT
-fpath=($ZDOTDIR/prompt $fpath)
-autoload -Uz office.zsh-theme; office.zsh-theme
+fpath=($ZDOTDIR/plugins/pure-prompt $fpath)
+autoload -Uz pure.plugin.zsh; pure.plugin.zsh
 
 # Load aliases and shortcuts if existent.
 source $ZDOTDIR/aliases/aliasrc
@@ -51,10 +50,6 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'left' vi-backward-char
-bindkey -M menuselect 'down' vi-down-line-or-history
-bindkey -M menuselect 'up' vi-up-line-or-history
-bindkey -M menuselect 'right' vi-forward-char
 # Fix backspace bug when switching modes
 bindkey "^?" backward-delete-char
 
@@ -65,3 +60,9 @@ bindkey -M vicmd v edit-command-line
 
 # Syntax highlighting plugin:
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /usr/share/fzf/key-bindings.zsh
+
+# NVM
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  --fast-reuse # This loads nvm
