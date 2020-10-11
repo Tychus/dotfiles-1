@@ -1,6 +1,6 @@
 # Arch Dotfiles
 
-This are my personal dotfiles for Arch Linux
+This are my personal dotfiles for Arch Linux base on the Gruvbox color scheme.
 
 ## Packages:
 
@@ -9,20 +9,31 @@ Install the following packages:
 ```bash 
 # Terminal:
 alacritty 
+rxvt-unicode
 
 # Programs:
 bspwm
 sxhkd
-nitrogen
+dunst
+feh
+htop
+neovim
+picom
+redshift
+udiskie
+udiskie2
 zsh
+zathura
+zathura-pdf-poppler
 
 # from aur:
+yay
 polybar
-compton-tryone-git
 
 # Music:
 mpd
 mpc
+mplayer
 ncmpcpp
 ```
 
@@ -42,10 +53,9 @@ dotfiles checkout
 dotfile submodule update --init --recursive
 ```
 
-Setup Music:
 ```bash
+## Setup Music:
 mpc update
-ncmpcpp -c ~/.config/ncmpcpp/config
 ```
 
 ## Usage:
@@ -60,4 +70,9 @@ dotfiles push
 ```
 
 ## Screenshot:
-![Screenshot](/Pictures/screenshot.png)
+![Desktop-Preview](https://raw.githubusercontent.com/candreslobor/wallpapers/master/preview.png)
+
+## Wallpaper:
+![Wallpaper](https://raw.githubusercontent.com/candreslobor/wallpapers/master/wallhaven-eydedl.jpg)
+
+

@@ -10,3 +10,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/candreslobor/nvim-configs.git
+[submodule "/home/candres/Pictures/wallpapers"]
+	path = /home/candres/Pictures/wallpapers
+	url = https://github.com/candreslobor/wallpapers.git

@@ -13,7 +13,7 @@ bspc monitor VGA1 -d I II III IV V
 xsetroot -cursor_name left_ptr &
 xrdb ~/.Xresources &
 picom -b &
-feh --bg-fill $HOME/Pictures/wallhaven-eydedl.jpg
+feh --bg-fill $HOME/Pictures/wallpapers/wallhaven-eydedl.jpg
 ~/.config/sxhkd/scripts/touchpad.sh
 ~/.config/polybar/launch.sh
 
