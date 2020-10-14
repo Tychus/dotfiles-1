@@ -13,3 +13,6 @@
 [submodule "/home/candres/Pictures/wallpapers"]
 	path = /home/candres/Pictures/wallpapers
 	url = https://github.com/candreslobor/wallpapers.git
+[submodule "/home/candres/.config/ranger/plugins/ranger_devicons"]
+	path = /home/candres/.config/ranger/plugins/ranger_devicons
+	url = https://github.com/alexanderjeurissen/ranger_devicons

@@ -20,15 +20,13 @@ alias df='df -h'
 alias aliasrc='$EDITOR $ZDOTDIR/aliases/aliasrc'
 alias bspwmrc='$EDITOR $XDG_CONFIG_HOME/bspwm/bspwmrc'
 alias keys='$EDITOR $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
+alias xinitrc='$EDITOR $XDG_CONFIG_HOME/xinitrc'
 
 # zsh Files:
 alias zshrc='$EDITOR $ZDOTDIR/.zshrc'
 alias zprofile='$EDITOR $ZDOTDIR/.zprofile'
 alias zshenv='$EDITOR ~/.zshenv'
 
-alias py='python'
-
 # Navigation:
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
-

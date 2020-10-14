@@ -9,7 +9,6 @@ Install the following packages:
 ```bash 
 # Terminal:
 alacritty 
-rxvt-unicode
 
 # Programs:
 bspwm
@@ -25,10 +24,12 @@ udiskie2
 zsh
 zathura
 zathura-pdf-poppler
+perl-file-mimeinfo
 
 # from aur:
 yay
 polybar
+ytop
 
 # Music:
 mpd

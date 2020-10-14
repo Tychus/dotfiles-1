@@ -7,3 +7,4 @@ map K zoom in
 map J zoom out
 map i recolor
 
+set selection-clipboard clipboard

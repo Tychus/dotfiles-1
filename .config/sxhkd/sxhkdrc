@@ -15,19 +15,19 @@ super + d
 	dmenu_run
 
 # close and kill
-super + {_,shift + }q
-	bspc node -{c,k}
+super + q
+	bspc node -c
 
 ##################################################
 ###--------------Restart / Exit----------------###
 ##################################################
 
 # Reload sxhkd and bspwm config
-alt + r
+alt + shift + r
 	pkill -USR1 -x sxhkd && bspc wm -r
 
 # Quit bspwm
-alt + q
+alt + shift +q
 	bspc quit
 
 ##################################################
@@ -78,7 +78,7 @@ super + {_,shift + }{1-9,0}
 
 # Toggle fullsreen
 super + f
-	bspcfullscreen
+	bspc node -t \~fullscreen
 
 # Toggle floating on and off
 super + s
