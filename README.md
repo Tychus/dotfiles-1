@@ -70,8 +70,8 @@ dotfiles commit -m "Add bashrc"
 dotfiles push
 ```
 
-## Screenshot:
-![Desktop-Preview](https://raw.githubusercontent.com/candreslobor/wallpapers/master/preview.png)
+## Screenshot Two-Bars:
+![Desktop-Preview](https://raw.githubusercontent.com/candreslobor/wallpapers/master/preview2.png)
 
 ## Wallpaper:
 ![Wallpaper](https://raw.githubusercontent.com/candreslobor/wallpapers/master/wallhaven-eydedl.jpg)
