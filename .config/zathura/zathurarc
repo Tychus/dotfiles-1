@@ -6,5 +6,9 @@ map R rotate
 map K zoom in
 map J zoom out
 map i recolor
+map s guioptions
 
 set selection-clipboard clipboard
+set default-bg "#282828"
+set statusbar-bg "#282828"
+set inputbar-bg "#282828"

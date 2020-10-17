@@ -11,8 +11,8 @@ super + shift + e
 	brave
 
 # program launcher
-super + d
-	dmenu_run
+super + r
+	rofi -show combi
 
 # close and kill
 super + q
@@ -24,7 +24,7 @@ super + q
 
 # Reload sxhkd and bspwm config
 alt + shift + r
-	pkill -USR1 -x sxhkd && bspc wm -r
+	killall sxhkd && bspc wm -r
 
 # Quit bspwm
 alt + shift +q

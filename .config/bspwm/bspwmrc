@@ -10,6 +10,7 @@ fi
 bspc monitor VGA1 -d I II III IV V
 
 ###---AUTOSTART---###
+sxhkd &
 xsetroot -cursor_name left_ptr &
 xrdb ~/.Xresources &
 picom -b &

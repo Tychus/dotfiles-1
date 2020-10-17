@@ -6,6 +6,7 @@ red = ${xrdb:color1:#222}
 yellow = ${xrdb:color3:#222}
 green = ${xrdb:color2:#222}
 blue = ${xrdb:color4:#222}
+
 ;
 ;
 ;
@@ -15,7 +16,7 @@ blue = ${xrdb:color4:#222}
 [bar/base]
 enable-ipc = true
 font-0=Cozette:pixelsize=1;2
-font-1=FontAwesome5Free:style=Solid:pixelsize=9.5:antialias=true;2
+font-1=FontAwesome5Free:style=Solid:pixelsize=9:antialias=true;2
 padding = 2
 border-size = 0
 border-color = ${colors.foreground}
@@ -35,6 +36,10 @@ inherit = bar/base
 modules-left = bspwm
 modules-right = redshift alsa wifi
 modules-center = date
+tray-position = right
+tray-detached = false
+tray-maxsize = 9
+tray-transparent = false
 
 [bar/bottom]
 inherit = bar/base
@@ -58,6 +63,7 @@ scroll-up = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts
 scroll-down = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh decrease
 interval=0.5
 ;format-padding = 1
+format-underline = ${colors.red}
 
 [module/bspwm]
 type = internal/bspwm
@@ -100,8 +106,9 @@ label = %{T2}%{T-} %date%, %time%
 
 [module/alsa]
 type = internal/alsa
-format-volume-margin = 1
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume><label-volume>
+format-volume-underline = ${colors.yellow} 
+format-muted-underline = ${colors.yellow}
 label-volume = %percentage:3:3%%
 use-ui-max = false
 interval = 5
@@ -148,7 +155,8 @@ interval = 1
 
 [module/wifi]
 type = internal/network
-format-disconnected-underline = #fe3d02
+format-connected-underline = ${colors.green} 
+format-disconnected-underline = ${colors.green}
 label-connected = "%{T2}%{T-} %essid%"
 label-disconnected = "%{T2}%{T-} OFF"
 interface = wlp2s0

@@ -1,6 +1,6 @@
 # Arch Dotfiles
 
-This are my personal dotfiles for Arch Linux base on the Gruvbox color scheme.
+This are my personal dotfiles for Arch Linux based on the Gruvbox color scheme.
 
 ## Packages:
 
@@ -24,12 +24,12 @@ udiskie2
 zsh
 zathura
 zathura-pdf-poppler
-perl-file-mimeinfo
 
 # from aur:
 yay
 polybar
 ytop
+mps-youtube
 
 # Music:
 mpd
@@ -71,7 +71,7 @@ dotfiles push
 ```
 
 ## Screenshot Two-Bars:
-![Desktop-Preview](https://raw.githubusercontent.com/candreslobor/wallpapers/master/preview2.png)
+![Desktop-Preview](https://raw.githubusercontent.com/candreslobor/wallpapers/master/desktop-previews/preview3.png)
 
 ## Wallpaper:
 ![Wallpaper](https://raw.githubusercontent.com/candreslobor/wallpapers/master/wallhaven-eydedl.jpg)
