@@ -76,9 +76,9 @@ modules-center = mpd
 
 [bar/tray]
 inherit = bar/base
-width = 15%
+width = 18%
 
-offset-x = 85%:-10
+offset-x = 82%:-10
 
 modules-left = style redshift alsa time 
 
