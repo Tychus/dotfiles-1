@@ -74,7 +74,7 @@ dotfiles push
 ![Desktop-Preview](https://raw.githubusercontent.com/candreslobor/wallpapers/master/desktop-previews/preview3.png)
 
 ## // Screenshot - One Bar:
-![Desktop-Preview2](https://raw.githubusercontent.com/candreslobor/wallpapers/master/desktop-previews/preview1.png)
+![Desktop-Preview2](https://raw.githubusercontent.com/candreslobor/wallpapers/master/desktop-previews/preview.png)
 
 ## // Wallpaper:
 ![Wallpaper](https://raw.githubusercontent.com/candreslobor/wallpapers/master/wallhaven-eydedl.jpg)
