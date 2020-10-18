@@ -23,8 +23,8 @@ setopt HIST_IGNORE_SPACE	# Do not record an event starting with space.
 setopt HIST_VERIFY		# Do not execute inmediately upon history expansion.
 
 # PROMPT
-fpath=($ZDOTDIR/plugins/pure-prompt $fpath)
-autoload -Uz pure.plugin.zsh; pure.plugin.zsh
+fpath=($ZDOTDIR/prompt/ $fpath)
+autoload -Uz office.zsh-theme; office.zsh-theme
 
 # Load aliases and shortcuts if existent.
 source $ZDOTDIR/aliases/aliasrc

@@ -72,7 +72,7 @@ offset-x = 35%
 ; modules-left = previous playpause next 
 ; modules-center = spotify
 ; Mpd
-modules-center = mpd style
+modules-center = mpd 
 
 [bar/tray]
 inherit = bar/base
@@ -80,7 +80,7 @@ width = 15%
 
 offset-x = 85%:-10
 
-modules-left = redshift alsa time 
+modules-left = style redshift alsa time 
 
 ;                      _       _           
 ;  _ __ ___   ___   __| |_   _| | ___  ___ 
@@ -205,8 +205,6 @@ click-left = "playerctl -p spotify play-pause"
 [module/style]
 type = custom/text
 content = Style
-content-background = ${color.mf}
-content-foreground = ${color.fg}
 content-padding = 1
 click-left = ~/.config/polybar/scripts/style-switch.sh &
 click-right = ~/.config/polybar/scripts/style-switch.sh &

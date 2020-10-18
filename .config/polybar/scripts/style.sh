@@ -1,13 +1,13 @@
 #!/bin/bash
 
 PDIR="$HOME/.config/polybar"
-LAUNCH="polybar-msg cmd restart"
+LAUNCH="bspc wm -r"
  
 if  [[ $1 = "-OneBar" ]]; then
 # Removing Old File
 rm -rf $PDIR/config $PDIR/launch.sh
 # Coping New File
-cp -r $PDIR/source/OneBar/* $PDIR
+cp -r $PDIR/OneBar/* $PDIR
 # Restarting polybar
 $LAUNCH &
 
@@ -15,7 +15,7 @@ elif  [[ $1 = "-TwoBars" ]]; then
 # Removing Old File
 rm -rf $PDIR/config $PDIR/launch
 # Coping New File
-cp -r $PDIR/source/TwoBars/* $PDIR
+cp -r $PDIR/TwoBars/* $PDIR
 # Restarting polybar
 $LAUNCH &
 
