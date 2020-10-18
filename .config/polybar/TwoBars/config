@@ -1,0 +1,172 @@
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+highlight = ${xrdb:color15:#222}
+red = ${xrdb:color1:#222}
+yellow = ${xrdb:color3:#222}
+green = ${xrdb:color2:#222}
+blue = ${xrdb:color4:#222}
+
+;
+;
+;
+;
+;
+
+[bar/base]
+enable-ipc = true
+font-0=Cozette:pixelsize=1;2
+font-1=FontAwesome5Free:style=Solid:pixelsize=9:antialias=true;2
+padding = 2
+border-size = 0
+border-color = ${colors.foreground}
+height = 22
+width = 100%
+fixed-center = true
+padding-rigth = 1
+separator ="  "
+line-size = 1
+background = ${colors.background}
+foreground = ${colors.foreground}
+override-redirect = false
+wm-restack = bspwm
+
+[bar/top]
+inherit = bar/base
+modules-left = bspwm
+modules-right = redshift alsa wifi
+modules-center = date style
+tray-position = right
+tray-detached = false
+tray-maxsize = 9
+tray-transparent = false
+
+[bar/bottom]
+inherit = bar/base
+bottom = true
+modules-left = title
+modules-right = cpu memory filesystem temperature
+modules-center = mpd
+
+;
+;
+;
+;
+;
+
+[module/redshift]
+type = custom/script
+format-prefix = "%{T2}%{T-} "
+exec = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh temperature
+click-left = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh toggle
+scroll-up = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh increase
+scroll-down = source ~/.config/polybar/scripts/env.sh && ~/.config/polybar/scripts/redshift.sh decrease
+interval=0.5
+;format-padding = 1
+format-underline = ${colors.red}
+
+[module/bspwm]
+type = internal/bspwm
+reverse-scroll = false
+label-focused = %name%
+label-focused-underline = ${colors.highlight}
+label-focused-foreground = ${colors.highlight}
+label-focused-padding = 1
+label-occupied = %name%
+label-occupied-foreground = ${colors.highlight}
+label-occupied-padding = 1
+label-empty = %name%
+label-empty-padding = 1
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+format-online = <icon-prev> <toggle> <icon-next>   <label-song>  <label-time>
+;fotmat-online-margin = 2
+format-offline = <label-offline>
+label-offline =   offline
+;format-offline-padding = 2
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+label-song = "%title%"
+label-song-maxlen = 35
+label-song-ellipsis = true
+
+[module/date]
+type = internal/date
+interval = 10
+format-margin = 1
+time = "%H:%M"
+date = "%d %b"
+label = %{T2}%{T-} %date%, %time%
+
+[module/alsa]
+type = internal/alsa
+format-volume = <ramp-volume><label-volume>
+format-volume-underline = ${colors.yellow} 
+format-muted-underline = ${colors.yellow}
+label-volume = %percentage:3:3%%
+use-ui-max = false
+interval = 5
+ramp-volume-0 = "%{T2}%{T-}"
+ramp-volume-1 = "%{T2}%{T-}"
+ramp-volume-2 = "%{T2}%{T-}"
+label-muted = "%{T2}%{T-} muted"
+label-muted-padding = 0
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 35
+label = " %title%"
+label-empty = " Empty"
+format-underline = ${colors.blue} 
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format-prefix = "%{T2}%{T-} "
+format-underline = ${colors.red}
+
+[module/memory]
+type = internal/memory
+label = "%{T2}%{T-} %percentage_used%%"
+format-underline = ${colors.yellow}
+interval = 1
+
+[module/filesystem]
+type = internal/fs
+label-mounted = "%{T2} %{T-}%percentage_used%%"
+format-mounted-underline = ${colors.green}
+fixed-values = true
+interval = 30
+mount-0 = /
+
+[module/temperature]
+type = internal/temperature
+label = %{T2}%{T-} %temperature-c%
+format-underline = ${colors.blue}
+thermal-zone = 1
+units = true
+interval = 1
+
+[module/wifi]
+type = internal/network
+format-connected-underline = ${colors.green} 
+format-disconnected-underline = ${colors.green}
+label-connected = "%{T2}%{T-} %essid%"
+label-disconnected = "%{T2}%{T-} OFF"
+interface = wlp2s0
+interval = 1.0
+
+[module/style]
+type = custom/text
+content = Style
+content-background = ${color.mf}
+content-foreground = ${color.fg}
+content-padding = 1
+click-left = ~/.config/polybar/scripts/style-switch.sh &
+click-right = ~/.config/polybar/scripts/style-switch.sh &

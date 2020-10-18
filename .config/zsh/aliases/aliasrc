@@ -1,0 +1,32 @@
+lolbanner () {
+	echo
+	figlet -f ~/.local/share/fonts/3d.flf $* | lolcat
+	echo
+}
+
+alias dotfiles='/usr/bin/git --git-dir=/home/candres/.dotfiles/ --work-tree=/home/candres'
+alias music='ncmpcpp'
+alias ls='ls --color=auto'
+alias vi='nvim'
+
+# System:
+alias shutdown='sudo shutdown now'
+alias restart='sudo reboot'
+alias xpropc='xprop | grep WM_CLASS' # display xprop class
+alias du='du -sh'
+alias df='df -h'
+
+# Files:
+alias aliasrc='$EDITOR $ZDOTDIR/aliases/aliasrc'
+alias bspwmrc='$EDITOR $XDG_CONFIG_HOME/bspwm/bspwmrc'
+alias keys='$EDITOR $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
+alias xinitrc='$EDITOR $XDG_CONFIG_HOME/xinitrc'
+
+# zsh Files:
+alias zshrc='$EDITOR $ZDOTDIR/.zshrc'
+alias zprofile='$EDITOR $ZDOTDIR/.zprofile'
+alias zshenv='$EDITOR ~/.zshenv'
+
+# Navigation:
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
